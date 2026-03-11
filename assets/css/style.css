@@ -1,0 +1,102 @@
+:root {
+  --bg: #f5f2eb;
+  --paper: #ffffff;
+  --ink: #1f2933;
+  --muted: #5f6c78;
+  --brand: #0b3d2e;
+  --accent: #ee964b;
+  --line: #e0d9cc;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: "Trebuchet MS", "Segoe UI", sans-serif;
+  color: var(--ink);
+  background: radial-gradient(circle at top right, #f6e8d2, var(--bg));
+}
+a { color: var(--brand); text-decoration: none; }
+.container { width: min(1120px, 92vw); margin: 0 auto; }
+.site-header { background: #fffdf9; border-bottom: 1px solid var(--line); position: sticky; top: 0; z-index: 20; }
+.nav-wrap { display: flex; align-items: center; justify-content: space-between; padding: 0.8rem 0; gap: 1rem; }
+.logo { display: flex; align-items: center; gap: .6rem; color: var(--brand); font-weight: 700; }
+.logo img { width: 140px; height: auto; }
+nav { display: flex; gap: 1rem; flex-wrap: wrap; }
+main { padding: 1.2rem 0 2rem; }
+.hero { background: var(--paper); border: 1px solid var(--line); border-radius: 14px; padding: 1rem 1.2rem; margin-bottom: 1rem; }
+.how-wrap { display: grid; grid-template-columns: 1.2fr 1fr; gap: 1rem; align-items: start; margin: 1rem 0; }
+.how-card { background: #fff; border: 1px solid var(--line); border-radius: 12px; padding: 1rem; }
+.how-card p { margin-top: 0; }
+.how-steps { margin: 0; padding-left: 1.1rem; line-height: 1.6; }
+.how-figure { background: #fff; border: 1px solid var(--line); border-radius: 12px; padding: .5rem; }
+.how-figure img { width: 100%; height: auto; display: block; border-radius: 8px; }
+.grid { display: grid; gap: 1rem; }
+.grid-3 { grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+.card { background: var(--paper); border: 1px solid var(--line); border-radius: 12px; overflow: hidden; }
+.card img { width: 100%; height: 190px; object-fit: cover; display: block; }
+.card-body { padding: .9rem; }
+.meta { font-size: .85rem; color: var(--muted); }
+.cloud { display: flex; flex-wrap: wrap; gap: .5rem; }
+.cloud a { padding: .35rem .6rem; border: 1px solid var(--line); border-radius: 50px; background: #fff; }
+.post-content img { max-width: 100%; border-radius: 10px; }
+.gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: .6rem; margin-top: .8rem; }
+.gallery img { width: 100%; height: 140px; object-fit: cover; border-radius: 10px; cursor: pointer; }
+.attachments li { margin-bottom: .4rem; }
+.pager { margin: 1rem 0; display: flex; gap: .4rem; flex-wrap: wrap; }
+.pager a, .pager span { padding: .35rem .6rem; border: 1px solid var(--line); border-radius: 8px; background: #fff; }
+.pager .active { background: var(--brand); color: #fff; border-color: var(--brand); }
+form { display: grid; gap: .7rem; }
+input, textarea, select, button {
+  font: inherit;
+  width: 100%;
+  padding: .6rem;
+  border: 1px solid #c8c3b9;
+  border-radius: 8px;
+  background: #fff;
+}
+button, .btn {
+  width: auto;
+  display: inline-block;
+  background: var(--brand);
+  color: #fff;
+  border-color: var(--brand);
+  cursor: pointer;
+}
+.btn.alt { background: var(--accent); border-color: var(--accent); }
+.notice { padding: .7rem .8rem; border-radius: 8px; margin: .4rem 0; }
+.notice.ok { background: #dbf8e5; color: #165f34; }
+.notice.err { background: #fde4e4; color: #8f1f1f; }
+table { width: 100%; border-collapse: collapse; background: #fff; border: 1px solid var(--line); }
+th, td { padding: .6rem; border-bottom: 1px solid var(--line); text-align: left; vertical-align: top; }
+.site-footer { border-top: 1px solid var(--line); background: #fffdf9; margin-top: 2rem; }
+.site-footer .container { padding: .8rem 0; }
+.lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.78);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 60;
+}
+.lightbox.open { display: flex; }
+.lightbox img { max-width: 88vw; max-height: 84vh; border-radius: 10px; }
+.lightbox button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(255,255,255,.9);
+  color: #000;
+}
+.lightbox .prev { left: 24px; }
+.lightbox .next { right: 24px; }
+.lightbox .close { top: 24px; right: 24px; transform: none; }
+.admin-menu { display: flex; flex-wrap: wrap; gap: .6rem; margin: .8rem 0; }
+@media (max-width: 700px) {
+  .logo img { width: 100px; }
+  .card img { height: 160px; }
+  .how-wrap { grid-template-columns: 1fr; }
+}

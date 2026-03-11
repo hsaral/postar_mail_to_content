@@ -1,0 +1,6 @@
+<svg width="220" height="64" viewBox="0 0 220 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect x="2" y="2" width="60" height="60" rx="14" fill="#0B3D2E"/>
+  <path d="M14 20h36v4H14v-4zm0 10h26v4H14v-4zm0 10h36v4H14v-4z" fill="#F4D35E"/>
+  <circle cx="45" cy="47" r="7" fill="#EE964B"/>
+  <text x="74" y="40" fill="#0B3D2E" font-size="30" font-family="Verdana, sans-serif" font-weight="700">POSTAR</text>
+</svg>

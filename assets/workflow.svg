@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="420" viewBox="0 0 1200 420" role="img" aria-label="POSTAR sistem akisi">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f9f3e7"/>
+      <stop offset="100%" stop-color="#f1e5d1"/>
+    </linearGradient>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#0b3d2e"/>
+    </marker>
+  </defs>
+
+  <rect width="1200" height="420" rx="24" fill="url(#bg)"/>
+  <text x="48" y="56" fill="#0b3d2e" font-size="34" font-family="Verdana" font-weight="700">POSTAR - Sistem Akis Semasi</text>
+
+  <g font-family="Verdana" fill="#1f2933" font-size="16">
+    <rect x="50" y="120" width="180" height="190" rx="16" fill="#fff" stroke="#d8c9ab"/>
+    <text x="70" y="160" font-weight="700">1. Mail Gelir</text>
+    <text x="70" y="190">Site mail kutusu</text>
+    <text x="70" y="214">IMAP ile taranir</text>
+
+    <rect x="270" y="120" width="180" height="190" rx="16" fill="#fff" stroke="#d8c9ab"/>
+    <text x="290" y="160" font-weight="700">2. Izin Kontrolu</text>
+    <text x="290" y="190">Gonderen mail</text>
+    <text x="290" y="214">izinli mi kontrol edilir</text>
+
+    <rect x="490" y="120" width="180" height="190" rx="16" fill="#fff" stroke="#d8c9ab"/>
+    <text x="510" y="160" font-weight="700">3. Ayrisma</text>
+    <text x="510" y="190">Konu -> baslik</text>
+    <text x="510" y="214">Icerik -> yazi</text>
+    <text x="510" y="238">Ekler -> medya</text>
+
+    <rect x="710" y="120" width="180" height="190" rx="16" fill="#fff" stroke="#d8c9ab"/>
+    <text x="730" y="160" font-weight="700">4. Editor Asamasi</text>
+    <text x="730" y="190">Oto yayin aciksa</text>
+    <text x="730" y="214">direkt yayina gider</text>
+    <text x="730" y="238">degilse beklemeye duser</text>
+
+    <rect x="930" y="120" width="220" height="190" rx="16" fill="#fff" stroke="#d8c9ab"/>
+    <text x="950" y="160" font-weight="700">5. Yayin ve Arsiv</text>
+    <text x="950" y="190">Yonetim panelinden</text>
+    <text x="950" y="214">Yayina Al / Arsivle</text>
+    <text x="950" y="238">kategoride listelenir</text>
+  </g>
+
+  <line x1="230" y1="214" x2="270" y2="214" stroke="#0b3d2e" stroke-width="3" marker-end="url(#arrow)"/>
+  <line x1="450" y1="214" x2="490" y2="214" stroke="#0b3d2e" stroke-width="3" marker-end="url(#arrow)"/>
+  <line x1="670" y1="214" x2="710" y2="214" stroke="#0b3d2e" stroke-width="3" marker-end="url(#arrow)"/>
+  <line x1="890" y1="214" x2="930" y2="214" stroke="#0b3d2e" stroke-width="3" marker-end="url(#arrow)"/>
+</svg>

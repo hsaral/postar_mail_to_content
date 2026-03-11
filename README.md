@@ -1,47 +1,47 @@
-# POSTAR
+# POSTAR Mail to Content
 
-Mail ile içerik alan, yönetim onay akışı olan blog sistemi.
+E-posta gönderimini site içeriği paylaşımı için kullanan, yönetim onay akışına sahip blog sistemi.
 
-## Özellikler
-- Yönetim paneli (giriş, ayarlar, izinli göndericiler, başvurular, yazı onayı)
-- Siteye özel mail kutusunu IMAP ile periyodik tarama
-- İzinli göndericilerden gelen mailleri otomatik yazıya dönüştürme
-- Mail başlığı -> yazı başlığı, mail metni -> içerik
-- Ek görselleri galeriye alma, ilk görseli öne çıkarma (görsel yoksa varsayılan görsel)
-- Video/ses/PDF/dosya eklerini formatına uygun gösterme ve indirme
-- Gönderici adı/mail bazlı otomatik kategori üretimi
+## Ozellikler
+- Yonetim paneli (giris, ayarlar, izinli gondericiler, basvurular, yazi onayi)
+- Siteye ozel mail kutusunu IMAP ile periyodik tarama
+- Izinli gondericilerden gelen mailleri otomatik yaziya donusturme
+- Mail basligi -> yazi basligi, mail metni -> icerik
+- Ek gorselleri galeriye alma, ilk gorseli one cikarma (gorsel yoksa varsayilan gorsel)
+- Video/ses/PDF/dosya eklerini formatina uygun gosterme ve indirme
+- Gonderici adi/mail bazli otomatik kategori uretimi
 - Kategori bulutu, arama, sayfalama
-- Son 10 görseli anasayfada gösterme
+- Son 10 gorseli anasayfada gosterme
 
 ## Kurulum
-0. Gerçek ayarları local dosyaya yazın (git'e girmesin):
+0. Gercek ayarlari local dosyaya yazin (git'e girmesin):
 ```bash
 cp /var/www/html/postar/config.local.example.php /var/www/html/postar/config.local.php
 ```
-`config.local.php` içine gerçek DB bilgilerini girin.
+`config.local.php` icine gercek DB bilgilerini girin.
 
-1. Veritabanını oluşturun:
+1. Veritabanini olusturun:
 ```bash
 mysql -h XXXXXX -u XXXXXX -p XXXXXX < /var/www/html/postar/db/schema.sql
 ```
-2. Varsayılan admin ile giriş yapın:
+2. Varsayilan admin ile giris yapin:
 - E-posta: `admin@postar.local`
-- Şifre: `Admin123!`
-3. `/admin/settings.php` ekranından:
-- site özel mail adresi
-- IMAP host/port/kullanıcı/şifre
+- Sifre: `Admin123!`
+3. `/admin/settings.php` ekranindan:
+- site ozel mail adresi
+- IMAP host/port/kullanici/sifre
 - polling interval (dakika)
-ayarlarını girin.
+ayarlarini girin.
 
 ## Cron
 ```bash
 * * * * * php /var/www/html/postar/cron/fetch_emails.php >> /var/log/postar_cron.log 2>&1
 ```
-Script kendi içinde `poll_interval_minutes` değerine göre süre dolmadan taramayı atlar.
+Script kendi icinde `poll_interval_minutes` degerine gore sure dolmadan taramayi atlar.
 
 ## Notlar
-- Türkçe karakterler için tüm tablolar `utf8mb4_turkish_ci`.
-- PHP'de `imap` eklentisi kurulu olmalıdır.
-- Yüklenen medya dosyaları `uploads/` altında tutulur.
-- Uygulama linkleri otomatik base path algılar. Gerekirse `config.php` içindeki `app.base_url` alanına örn. `/postar` yazabilirsiniz.
-- `config.php` dosyası bilerek `XXXXXX` placeholder içerir. Gerçek değerler `config.local.php` dosyasında tutulmalıdır.
+- Turkce karakterler icin tum tablolar `utf8mb4_turkish_ci`.
+- PHP'de `imap` eklentisi kurulu olmalidir.
+- Yuklenen medya dosyalari `uploads/` altinda tutulur.
+- Uygulama linkleri otomatik base path algilar. Gerekirse `config.php` icindeki `app.base_url` alanina ornegin `/postar` yazabilirsiniz.
+- `config.php` dosyasi bilerek `XXXXXX` placeholder icerir. Gercek degerler `config.local.php` dosyasinda tutulmalidir.
